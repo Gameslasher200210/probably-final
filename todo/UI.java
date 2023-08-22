@@ -15,7 +15,8 @@ public class UI {
         Jlist2Gui Jlist = new Jlist2Gui();
        
         new addButtonListener(ui,Jlist);
-       new contextMenu(Jlist);
+       new contextMenuCompleted(Jlist);
+       new contextMenuUncompleted(Jlist);
        
         frame.add(ui, BorderLayout.NORTH); // Adding elements at the top
         frame.add(Jlist, BorderLayout.CENTER); // Adding the scroll pane in the center
@@ -25,7 +26,7 @@ public class UI {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-            new UI();
+           new UI();
         });
     }
 }

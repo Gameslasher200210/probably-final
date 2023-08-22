@@ -34,9 +34,7 @@ public class Jlist2Gui extends JScrollPane {
         label = new JLabel("COMPLETED TASKS");
         allPanels.add(label);
         allPanels.add(completedPanel);
-         // Create a custom cell renderer with a checkbox
-        uncompletedList.setCellRenderer(new CheckboxListCellRenderer());
-        completedList.setCellRenderer(new CheckboxListCellRenderer());
+
 
         uncompletedJPanel.add(uncompletedList);
         completedPanel.add(completedList);
@@ -63,32 +61,8 @@ public class Jlist2Gui extends JScrollPane {
             listModel.addElement("Error reading file: " + e.getMessage());
         }
     }  
-        // Custom cell renderer class
-        class CheckboxListCellRenderer extends JCheckBox implements ListCellRenderer<String> {
-            public Component getListCellRendererComponent(JList<? extends String> list,
-                                                          String value,
-                                                          int index,
-                                                          boolean isSelected,
-                                                          boolean cellHasFocus) {
-                setComponentOrientation(list.getComponentOrientation());
-                setFont(list.getFont());
-                setBackground(list.getBackground());
-                setForeground(list.getForeground());
-                setSelected(isSelected);
-                setText(value);
-                
-                // Adjust the checkbox selection based on the model
-                if (isSelected) {
-                    setForeground(Color.white);
-                    setBackground(list.getSelectionBackground());
-                } else {
-                    setForeground(list.getForeground());
-                    setBackground(list.getBackground());
-                }
-    
-                return this;
-            }
-    }}
+     
+    }
 
   
 
