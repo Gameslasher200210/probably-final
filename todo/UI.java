@@ -7,7 +7,7 @@ public class UI {
     public JFrame frame;
 
     public UI() {
-        frame = new JFrame("File To JList GUI");
+        frame = new JFrame("TO DO LISTS APP");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
         
