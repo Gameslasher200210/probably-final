@@ -10,14 +10,15 @@ public class UI {
         frame = new JFrame("TO DO LISTS APP");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(500, 400);
-        
-        addingElements ui = new addingElements("ADD A NEW TASK");
         Jlist2Gui Jlist = new Jlist2Gui();
-       
-        new addButtonListener(ui,Jlist);
-       new contextMenuCompleted(Jlist);
-       new contextMenuUncompleted(Jlist);
-       
+        menu menuPanel = new menu(frame, Jlist); // Create the menu panel
+        addingElements ui = new addingElements("ADD A NEW TASK");
+
+        new addButtonListener(ui, Jlist);
+        new contextMenuCompleted(Jlist);
+        new contextMenuUncompleted(Jlist);
+
+        frame.setJMenuBar(menuPanel.getMenuBar()); // Set the menu bar in the frame
         frame.add(ui, BorderLayout.NORTH); // Adding elements at the top
         frame.add(Jlist, BorderLayout.CENTER); // Adding the scroll pane in the center
 
@@ -26,7 +27,7 @@ public class UI {
 
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
-           new UI();
+            new UI();
         });
     }
 }

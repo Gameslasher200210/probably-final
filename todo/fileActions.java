@@ -108,6 +108,16 @@ public class fileActions {
             System.err.println("Error updating line in the file: " + e.getMessage());
         }
     }
-    
+    public static void clearFileContent(String fileName) {
+        try {
+            FileWriter writer = new FileWriter(fileName);
+            writer.write(""); // Write an empty string to clear the content
+            writer.close();
+            System.out.println("File content cleared: " + fileName);
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.err.println("Error clearing file content: " + e.getMessage());
+        }
+    }
 
 }

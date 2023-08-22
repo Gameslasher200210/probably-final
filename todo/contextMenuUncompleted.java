@@ -24,7 +24,7 @@ public class contextMenuUncompleted {
         addJListClickListener(Jlist.completedList);
 
         setupContextMenu(Jlist.uncompletedList, "uncompleted.txt");
-        setupContextMenu(Jlist.completedList, "completed.txt");
+      
     }
 
     public void setupContextMenu(JList<String> jList, String fileName) {

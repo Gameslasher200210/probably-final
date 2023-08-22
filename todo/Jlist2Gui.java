@@ -61,6 +61,19 @@ public class Jlist2Gui extends JScrollPane {
             listModel.addElement("Error reading file: " + e.getMessage());
         }
     }  
+    public void clearUncompletedList() {
+      
+        uncompletedListModel.clear();
+      
+       
+    }
+    
+    
+    public void clearCompletedList() {
+        
+        completedListModel.clear();
+    }
+    
      
     }
 
