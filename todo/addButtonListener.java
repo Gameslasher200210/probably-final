@@ -38,11 +38,12 @@ public class addButtonListener implements ActionListener {
     public void actionPerformed(ActionEvent e) {
         String inputText = element.getTextField().getText();
         fileActions act = new fileActions();
+        if(!inputText.equals("") && !inputText.equals("ADD A NEW TASK")){
         act.add("uncompleted.txt", inputText);
         Jlist.uncompletedListModel.addElement(inputText);
+        }
         // Reset the placeholder text
         element.getTextField().setText("ADD A NEW TASK");
-
-        // Add code to handle exceptions
+      
     }
 }
