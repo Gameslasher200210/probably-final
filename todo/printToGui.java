@@ -31,6 +31,7 @@ public class printToGui {
     public DefaultListModel<String> uncompletedListModel;
     public DefaultListModel<String> completedListModel;
     public fileActions actions = new fileActions();
+    panel2gui gui = new panel2gui();
 
     public printToGui() {
         // Initialize components and setup UI
