@@ -1,0 +1,12 @@
+private class CustomListCellRenderer extends DefaultListCellRenderer {
+        private Border border = BorderFactory.createLineBorder(Color.BLACK, 1);
+
+        @Override
+        public Component getListCellRendererComponent(
+                JList<?> list, Object value, int index, boolean isSelected, boolean cellHasFocus) {
+            Component renderer = super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
+            if (renderer instanceof JLabel) {
+                ((JLabel) renderer).setBorder(border);
+            }
+            return renderer;
+        }

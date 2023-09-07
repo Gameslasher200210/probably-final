@@ -40,10 +40,28 @@ public class Jlist2Gui extends JScrollPane {
         completedPanel.add(completedList);
 
         this.setViewportView(allPanels);
+         
+
 
         displayFileContent(uncompletedListModel, "uncompleted.txt");
         displayFileContent(completedListModel, "completed.txt");
-        
+
+
+        //design
+
+       Color color= new Color(51,51,51);
+
+        uncompletedList.setBackground(color);
+        uncompletedJPanel.setBackground(color);
+        uncompletedList.setForeground(Color.WHITE);
+
+        completedList.setBackground(color);
+        completedPanel.setBackground(color);
+        completedList.setForeground(Color.WHITE);
+
+        allPanels.setBackground(Color.DARK_GRAY);
+        label.setBackground(Color.DARK_GRAY);
+        label.setForeground(Color.WHITE);
 
   
     }

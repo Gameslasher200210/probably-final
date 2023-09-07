@@ -2,10 +2,11 @@ package todo;
 
 import javax.swing.*;
 import java.awt.BorderLayout;
+import java.awt.Color;
 
 public class UI {
     public JFrame frame;
-
+     
     public UI() {
         frame = new JFrame("TO DO LISTS APP");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -21,13 +22,15 @@ public class UI {
         frame.setJMenuBar(menuPanel.getMenuBar()); // Set the menu bar in the frame
         frame.add(ui, BorderLayout.NORTH); // Adding elements at the top
         frame.add(Jlist, BorderLayout.CENTER); // Adding the scroll pane in the center
-
+    
+        frame.setBackground(Color.DARK_GRAY);
         frame.setVisible(true);
     }
-
-    public static void main(String[] args) {
+  
+    public static void main(String[] args) { 
         SwingUtilities.invokeLater(() -> {
             new UI();
         });
     }
 }
+ 
