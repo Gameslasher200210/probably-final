@@ -7,7 +7,7 @@ import java.io.IOException;
 
 class CustomPanel extends JPanel {
     private JLabel label;
-
+ 
     public CustomPanel(String text) {
         label = new JLabel("<html><body style='width: 140px'>" + text + "</body></html>");
         label.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));

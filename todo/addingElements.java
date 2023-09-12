@@ -13,7 +13,7 @@ public class addingElements extends JPanel{
     private JTextField textField;
     addingElements(String textFieldText){
         this.addButton = new JButton("+");
-        this.textField = new JTextField(textFieldText,50);
+         this.textField = new JTextField(textFieldText,50);
 
     //styling elements 
     //ADD BUTTON
@@ -21,7 +21,7 @@ public class addingElements extends JPanel{
     addButton.setFont(buttonFont);
     addButton.setContentAreaFilled(false);
     addButton.setOpaque(true);
-    addButton.setBackground(Color.WHITE);
+    addButton.setBackground(new java.awt.Color(0, 255, 0));
     addButton.setForeground(Color.BLACK);
     addButton.setFocusPainted(false);
     addButton.setBorderPainted(false);
@@ -29,7 +29,7 @@ public class addingElements extends JPanel{
     Font textfield = new Font("Arial",Font.PLAIN, 16);
     textField.setFont(textfield);
     textField.setForeground(Color.BLACK);
-    textField.setBackground(Color.WHITE);
+    textField.setBackground(new java.awt.Color(102, 102, 102));
     textField.setBorder(BorderFactory.createLineBorder(Color.GRAY));
    // Border roundedBorder = BorderFactory.createRoundedBorder(10, 10);
    // textField.setBorder(roundedBorder);

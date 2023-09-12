@@ -35,33 +35,37 @@ public class Jlist2Gui extends JScrollPane {
         allPanels.add(label);
         allPanels.add(completedPanel);
 
-
         uncompletedJPanel.add(uncompletedList);
         completedPanel.add(completedList);
 
         this.setViewportView(allPanels);
-         
-
 
         displayFileContent(uncompletedListModel, "uncompleted.txt");
         displayFileContent(completedListModel, "completed.txt");
 
-
         //design
 
-       Color color= new Color(51,51,51);
+        Color bgColor = new Color(51, 51, 51);
+        Color labelColor = Color.WHITE;
+        Font font = new Font("Arial", Font.PLAIN, 18);
+        
 
-        uncompletedList.setBackground(color);
-        uncompletedJPanel.setBackground(color);
+        uncompletedJPanel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 255, 0), 2, true));
+        uncompletedList.setBackground(bgColor);
+        uncompletedJPanel.setBackground(bgColor);
         uncompletedList.setForeground(Color.WHITE);
+        uncompletedList.setFont(font);
 
-        completedList.setBackground(color);
-        completedPanel.setBackground(color);
+        completedPanel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 255, 0), 2));
+        completedList.setBackground(bgColor);
+        completedPanel.setBackground(bgColor);
         completedList.setForeground(Color.WHITE);
+        completedList.setFont(font);
 
         allPanels.setBackground(Color.DARK_GRAY);
         label.setBackground(Color.DARK_GRAY);
-        label.setForeground(Color.WHITE);
+        label.setForeground(labelColor);
+        label.setFont(font);
 
   
     }
@@ -94,6 +98,3 @@ public class Jlist2Gui extends JScrollPane {
     
      
     }
-
-  
-

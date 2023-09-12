@@ -73,6 +73,7 @@ public class contextMenuCompleted {
                     actions.removeByLineNumber("completed.txt", ++selectedIndex);
 
                     // Add the item to the uncompleted list
+                    
                     uncompletedModel.addElement(selectedItem);
                     actions.add("uncompleted.txt", selectedItem);
                 }
